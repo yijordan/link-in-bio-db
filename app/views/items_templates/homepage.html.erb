@@ -1,9 +1,91 @@
-Hello, world!
+ <style>
+      * {
+        /* border: 1px red dashed; */
+        color:#385ac9;
+      }
+      html {
+        min-height: 100%;
+      }
+      div {
+        /* border: 2px red dashed; */
+      }
+      body {
+        min-height: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: linear-gradient(0deg, #a2ccff, #FFFFFF);
+      }
+      a {
+        font-size: 15px;
+        text-decoration: none;
+        text-align: center;
+      }
+      .main-container {
+        max-width: 640px;
+        margin: auto;
+      }
+      .image-row {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .name-row {
+        font-size: 50px;
+        font-family: "Prata", serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .social-icons-row {
+        margin-bottom: 40px;
+        margin-left: 60px;
+        margin-right: 60px;
+        display: flex;
+        justify-content: space-around;
+        font-family: "Poppins", serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+      .links-row {
+      }
+      .avatar-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 150px;
+      }
+      .item {
+        background-color: rgba(219, 236, 255, 0.303);  
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 500px;
+        box-shadow: 3px 3px 10px 0px rgba(49, 121, 135, 0.3);
+        padding-right: 90px;
+      }
+      .link-thumbnails {
+        width: 80px;
+        height: 75px;
+        object-fit: cover;
+        border-radius: 500px;
+      }
+      .link-text {
+        text-align: center;
+        flex-grow: 1;
+        font-family: "Poppins", serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 18px;
+      }
+    </style>
 
-<% @list_of_items.each do |the_item| %>
-  <div>
-    <a href="<%= the_item.link_url %>">
-      <%= the_item.link_description %>
-    </a>
-  </div>
-<% end %>
+<div class="links-row">
+  <% @list_of_items.each do |the_item| %>
+    <div class="item">
+      <img src"<%= the_item.thumbnail_url %>" class ="thumbnail">
+      <a class ="link-text" target="_blank" href="<%= the_item.link_url %>">
+        <%= the_item.link_description %>
+      </a>
+    </div>
+  <% end %>
+</div>
