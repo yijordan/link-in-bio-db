@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_28_013146) do
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
-    t.string "link_urp"
+    t.string "link_url"
     t.string "link_description"
     t.string "thumbnail_url"
     t.datetime "created_at", null: false

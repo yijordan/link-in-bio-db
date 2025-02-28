@@ -4,7 +4,7 @@
 #
 #  id               :bigint           not null, primary key
 #  link_description :string
-#  link_urp         :string
+#  link_url         :string
 #  thumbnail_url    :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
